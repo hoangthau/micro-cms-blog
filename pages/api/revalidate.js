@@ -1,5 +1,6 @@
 export default async function handler(req, res) {
-  console.log(req.body.id);
+  console.info(req.body);
+  console.log(req.method);
   try {
     // this should be the actual path not a rewritten path
     // e.g. for "/blog/[slug]" this should be "/blog/post-1"

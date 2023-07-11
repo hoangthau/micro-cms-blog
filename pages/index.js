@@ -2,7 +2,6 @@ import Link from "next/link";
 import { client } from "../libs/client";
 
 export default function Home({ blog }) {
-  console.log(blog)
   return (
     <div>
       <ul>
