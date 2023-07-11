@@ -19,26 +19,17 @@ export default function BlogId({ blog }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+export async function getServerSideProps({ params }) {
   const id = params.id;
   const data = await client.get({ endpoint: 'blog', contentId: id });
-
+  await sleep(3000);
   return {
     props: {
       blog: data,
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const data = await client.get({
-    endpoint: 'blog',
-  });
-
-  const paths = data.contents.map((item) => ({ params: { id: item.id } }));
-
-  return {
-    paths,
-    fallback: 'blocking'
   };
 }

@@ -11,6 +11,13 @@ export default function Home({ blog }) {
           </li>
         ))}
       </ul>
+      <ul>
+        {blog.map((blog) => (
+          <li key={blog.id}>
+            <Link href={`/article/${blog.id}`}>{blog.title}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
