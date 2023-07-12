@@ -1,5 +1,4 @@
 import { client } from '../../../libs/client';
-import Layout from '@/components/Layout';
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -15,8 +14,10 @@ export default async function Home({ params: { id } }) {
   const data = await getData(id);
 
   return (
-    <Layout>
+    <>
       <div>Article page {data.title}</div>
-    </Layout>
+      <div>Related articles</div>
+      <div>Other articles</div>
+    </>
   );
 }

@@ -20,6 +20,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import SupportIcon from '@mui/icons-material/Support';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ThemeRegistry from './ThemeRegistry';
+import Layout from '@/components/Layout';
 
 export const metadata = {
   title: 'Next.js App Router + Material UI v5',
@@ -47,18 +48,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <ThemeRegistry>
-          <Box
-            component="main"
-            sx={{
-              flexGrow: 1,
-              bgcolor: 'background.default',
-              ml: `${DRAWER_WIDTH}px`,
-              mt: ['48px', '56px', '64px'],
-              p: 3,
-            }}
-          >
-            {children}
-          </Box>
+          <Layout>{children}</Layout>
         </ThemeRegistry>
       </body>
     </html>

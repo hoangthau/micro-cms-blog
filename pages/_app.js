@@ -25,7 +25,7 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        {isPageLoading ? <Layout><p>Loading...</p> </Layout>: <Component {...pageProps} />}
+        {isPageLoading ? <Layout><p>Loading...</p></Layout>: <Layout><Component {...pageProps} /></Layout>}
       </ThemeProvider>
     </CacheProvider>
   );
