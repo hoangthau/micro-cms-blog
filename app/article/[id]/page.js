@@ -1,3 +1,4 @@
+import Layout from '@/components/Layout';
 import { client } from '../../../libs/client';
 
 function sleep(ms) {
@@ -14,10 +15,10 @@ export default async function Home({ params: { id } }) {
   const data = await getData(id);
 
   return (
-    <>
+    <Layout>
       <div>Article page {data.title}</div>
       <div>Related articles</div>
       <div>Other articles</div>
-    </>
+    </Layout>
   );
 }
