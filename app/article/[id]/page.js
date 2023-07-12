@@ -1,10 +1,9 @@
-
 import { client } from '../../../libs/client';
+import Layout from '@/components/Layout';
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
 
 async function getData(id) {
   const data = await client.get({ endpoint: 'blog', contentId: id });
@@ -12,13 +11,12 @@ async function getData(id) {
   return data;
 }
 
-export default async function Home({
-  params: { id },
-}) {
+export default async function Home({ params: { id } }) {
   const data = await getData(id);
 
-
   return (
-    <div>Article page {data.title}</div>
-  )
+    <Layout>
+      <div>Article page {data.title}</div>
+    </Layout>
+  );
 }
