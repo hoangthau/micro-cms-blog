@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "microcms-js-sdk": "^2.3.2",
-    "next": "13.2.4",
+    "next": "^13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.59.3"
