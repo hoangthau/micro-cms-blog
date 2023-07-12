@@ -26,7 +26,7 @@ function sleep(ms) {
 export async function getServerSideProps({ params }) {
   const id = params.id;
   const data = await client.get({ endpoint: 'blog', contentId: id });
-  await sleep(3000);
+  await sleep(2000);
   return {
     props: {
       blog: data,
